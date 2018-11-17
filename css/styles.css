@@ -136,16 +136,17 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
+  border: 1% solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
-  padding: 0 30px 25px;
+  margin:5%;
+  min-height:30%;
   text-align: left;
-  width: 270px;
+  max-width:40%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
