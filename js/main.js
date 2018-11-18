@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetchCuisines();
 });
 
+ navigator.serviceWorker.register('/sw.js').then(function(reg) {
+    if (!navigator.serviceWorker.controller) {
+      return;
+    }
+});
 /**
  * Fetch all neighborhoods and set their HTML.
  */
@@ -218,4 +223,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
