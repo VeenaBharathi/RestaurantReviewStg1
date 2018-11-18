@@ -16,11 +16,11 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1><a tabindex="1" aria-label= "restaraunt reviews details page" href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
+      <li><a tabindex="2" aria-label = "Home. click to  go back to home page" href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -30,22 +30,24 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container">
+     <section id="map-container" tabindex="0">
       <div id="map"></div>
-    </section>
+    </section>    
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+    <section  aria-role="application" tabindex="3" aria-label="Details of restaurant" id="restaurant-container">
+      <h1 tabindex="4" id="restaurant-name"></h1>
+      <img tabindex="5" alt="restaurant image" id="restaurant-img">
+      <p tabindex="6" id="restaurant-cuisine"></p>
+      <p tabindex="7" id="restaurant-address"></p>
+      <table tabindex="8" id="restaurant-hours"></table>
     </section>
+
+
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul aria-label="reviews" tabindex="10" id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
   </main>
