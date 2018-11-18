@@ -85,7 +85,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   name.innerHTML = restaurant.name;
   // name.setAttribute('role',"header");
   //   name.setAttribute('tabindex',"1");
-  name.setAttribute('aria-label',restaurant.name + " page"); 
+  name.setAttribute('aria-label', restaurant.name); 
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
