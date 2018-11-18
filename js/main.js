@@ -179,7 +179,6 @@ createRestaurantHTML = (restaurant) => {
 
   image.setAttribute('alt',"image for " + restaurant.name);
 
-
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
@@ -193,9 +192,9 @@ createRestaurantHTML = (restaurant) => {
   more.setAttribute('aria-label', "Click to view details for " + restaurant.name + " restaurant near " + restaurant.neighborhood
     + " at location " + restaurant.address + ". Move further for other options");
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  li.append(more);
 
-  return li
+  return li;
 }
 
 /**
