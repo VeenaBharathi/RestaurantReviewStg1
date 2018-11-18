@@ -172,7 +172,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(name);
   name.focus();
 
-  image.setAttribute('alt', restaurant.name);
+  image.setAttribute('alt',"image for " + restaurant.name);
 
 
   const neighborhood = document.createElement('p');
