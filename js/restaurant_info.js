@@ -85,20 +85,20 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   name.innerHTML = restaurant.name;
   // name.setAttribute('role',"header");
   //   name.setAttribute('tabindex',"1");
-  name.setAttribute('aria-label', restaurant.name); 
+  name.setAttribute('alt', restaurant.name); 
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
-   address.setAttribute('aria-label','address ' + restaurant.address);
+   address.setAttribute('alt','address ' + restaurant.address);
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.setAttribute('aria-label','image for ' + restaurant.name);
+  image.setAttribute('alt','image for ' + restaurant.name);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
-   cuisine.setAttribute('aria-label','cuisine type ' + restaurant.cuisine_type);
+   cuisine.setAttribute('alt','cuisine type ' + restaurant.cuisine_type);
 
   // fill operating hours
   if (restaurant.operating_hours) {
