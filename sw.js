@@ -8,7 +8,7 @@ self.addEventListener('install', function(event) {
 
       return cache.addAll([
         '/skeleton',
-        'restaurant.html',
+        '/restaurant.html',
         'css/styles.css',
         'js/dbhelper.js',
         'js/main.js',
