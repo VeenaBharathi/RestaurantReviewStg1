@@ -6,13 +6,13 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
-});
-
- navigator.serviceWorker.register('/sw.js').then(function(reg) {
+   navigator.serviceWorker.register('/sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
       return;
     }
 });
+});
+
 
 /**
  * Initialize leaflet map

@@ -7,8 +7,8 @@ self.addEventListener('install', function(event) {
     caches.open(staticCacheName).then(function(cache) {
 
       return cache.addAll([
-        '/skeleton',
-        '/restaurant.html',
+        '/',
+        'restaurant.html',
         'css/styles.css',
         'js/dbhelper.js',
         'js/main.js',
@@ -43,7 +43,7 @@ self.addEventListener('fetch', function(event) {
 
   if(requestUrl.origin === location.origin) {
   	if(requestUrl.pathname === '/') {
-  		event.respondWith(caches.match('/skeleton'));
+  		event.respondWith(caches.match('/'));
   		return; 
   	}
   }
