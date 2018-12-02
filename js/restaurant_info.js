@@ -1,18 +1,21 @@
 let restaurant;
 var newMap;
 
-/**
- * Initialize map as soon as the page is loaded.
- */
-document.addEventListener('DOMContentLoaded', (event) => {  
-  initMap();
-   navigator.serviceWorker.register('/sw.js').then(function(reg) {
+
+if('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('/sw.js').then(function(reg) {
     if (!navigator.serviceWorker.controller) {
       return;
     }
 });
-});
+}
 
+/**
+ * Initialize map as soon as the page is loaded.
+ */
+document.addEventListener('DOMContentLoaded', (event) => { 
+  initMap();
+});
 
 /**
  * Initialize leaflet map
